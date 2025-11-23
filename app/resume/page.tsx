@@ -13,17 +13,6 @@ export default function ResumePage() {
 
   useEffect(() => {
     (async () => {
-      try {
-        const { data } = await supabase.auth.getUser();
-        setUserEmail(data?.user?.email ?? "");
-      } catch (e) {
-        // ignore
-      }
-    })();
-  }, []);
-
-  useEffect(() => {
-    (async () => {
       const { data } = await supabase.from("resume").select("*").eq("id", 1).single();
       setResume(data);
       setLoading(false);
@@ -50,14 +39,14 @@ export default function ResumePage() {
           <h1 className="text-4xl font-bold text-slate-900 dark:text-white">Resume</h1>
           <p className="text-lg text-slate-600 dark:text-slate-400">No resume available yet.</p>
         </div>
-        {userEmail && (
+      
           <Link href="/resume/edit">
             <Button variant="default" size="lg">
               <Edit3 size={20} />
               Create Resume
             </Button>
           </Link>
-        )}
+        
       </section>
     );
   }

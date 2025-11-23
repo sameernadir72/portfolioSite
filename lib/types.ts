@@ -7,6 +7,7 @@ export type Project = {
   live_url?: string | null;
   image_url?: string | null;
   created_at?: string | null;
+  features: string;
 };
 
 export type Resume = {

@@ -77,7 +77,7 @@ export default function Navbar() {
 
         {/* Auth Section */}
         <div className="hidden md:flex items-center gap-3">
-          {userEmail ? (
+          {/* {userEmail ? (
             <>
               <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-100/50 dark:bg-slate-800/50 text-sm">
                 <User size={16} className="text-cyan-600 dark:text-cyan-400" />
@@ -99,7 +99,7 @@ export default function Navbar() {
             >
               Sign In
             </Button>
-          )}
+          )} */}
         </div>
 
         {/* Mobile Menu Button */}
